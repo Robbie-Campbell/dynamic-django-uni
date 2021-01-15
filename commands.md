@@ -3,6 +3,7 @@ py -m venv venv
 pip install django
 python-admin startproject core .
 py manage.py migrate
+py manage.py makemigrations
 py manage.py createsuperuser
 python manage.py runserver
 ctrl-c - close-server
