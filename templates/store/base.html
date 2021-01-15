@@ -8,14 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Sample {% block title %} Home {% endblock %}</title>
   </head>
   <body>
-    {% for product in products %}
-        <h1>{{ product.title }}</h1>
-        <caption>{{ product.author }}</caption>
-        <p>{{ product.desc }}</p>
-    {% endfor %}
+    <nav>Oh, this is a navbar!!!</nav>
+    {% block content %}
+    <h1>This is the homepage</h1>
+    {% endblock %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
