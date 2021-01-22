@@ -8,3 +8,6 @@ py manage.py createsuperuser
 python manage.py runserver
 ctrl-c - close-server
 ctrl-l - clear terminal
+pip freeze > requirements.txt
+py manage.py test
+pip install django-coverage
