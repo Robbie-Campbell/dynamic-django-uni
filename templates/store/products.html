@@ -3,10 +3,26 @@
 {% block title %} Products {% endblock %}
 
 {% block content %}
-    {% for product in products %}
-            <h1>{{ product.title }}</h1>
-            <h5>{{ product.author }}</h5>
-            <caption> {{ product.category.name }}</caption>
-            <p>{{ product.desc }}</p>
-    {% endfor %}
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for product in products %}
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 fw-normal">{{ product.title }}</h4>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title pricing-card-title">Author: {{ product.author }}</h5>
+                            <h6>Category: {{ product.category.name }}</h6>
+                            <img class="img-fluid" src="{{ product.image.url }}" alt="product image">
+                            <p>{{ product.desc }}</p>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Read more</button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}
