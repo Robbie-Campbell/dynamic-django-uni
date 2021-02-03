@@ -1,6 +1,7 @@
 from django.test import TestCase
 from store.models import Category, Product
 
+
 class DatabaseTestCase(TestCase):
     def setUp(self):
         self.cat = Category.objects.create(name="firstname", slug="firstname")
